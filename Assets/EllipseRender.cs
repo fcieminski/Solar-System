@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
-public class Elipse : MonoBehaviour
+public class EllipseRender : MonoBehaviour
 {
     LineRenderer comp;
 
     [Range(3, 36)]
     public int segments;
-    public float xAxis;
-    public float yAxis;
-
+    public Ellipse ellipse;
     void Awake()
     {
         comp = GetComponent<LineRenderer>();
@@ -23,10 +21,8 @@ public class Elipse : MonoBehaviour
         Vector3[] points = new Vector3[segments + 1];
         for (int i = 0; i < segments; i++)
         {
-            float angle = ((float)i / (float)segments) * 360 * Mathf.Deg2Rad;
-            float x = Mathf.Sin(angle) * xAxis;
-            float y = Mathf.Cos(angle) * yAxis;
-            points[i] = new Vector3(x, y, 0f);
+            Vector2 position2D = ellipse.Evaluate((float)i / (float)segments);
+            points[i] = new Vector3(position2D.x, position2D.y, 0f);
 
         }
         points[segments] = points[0];
