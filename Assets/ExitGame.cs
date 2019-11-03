@@ -9,7 +9,6 @@ public class ExitGame : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
-            Debug.Log("Game is exiting");
         }
 
     }
