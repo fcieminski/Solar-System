@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Orbit : MonoBehaviour
 {
-    public float time;
     public float speed;
 
     void Start()
