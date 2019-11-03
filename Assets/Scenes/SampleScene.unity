@@ -565,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516484412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -149.9, y: 0, z: 0}
+  m_LocalPosition: {x: -149, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1649981622}
@@ -604,6 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1649981622}
+  - component: {fileID: 1649981623}
   m_Layer: 0
   m_Name: orbit
   m_TagString: Untagged
@@ -626,3 +627,22 @@ Transform:
   m_Father: {fileID: 1474254957}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649981623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649981621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421abc70b6082a489ac080d3205dd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingPlanet: {fileID: 1516484416}
+  orbit:
+    xAxis: -149
+    zAxis: -120
+  orbitProgress: 0
+  orbitPeriod: 36
+  orbitActive: 1

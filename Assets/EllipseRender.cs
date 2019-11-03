@@ -21,8 +21,8 @@ public class EllipseRender : MonoBehaviour
         Vector3[] points = new Vector3[segments + 1];
         for (int i = 0; i < segments; i++)
         {
-            Vector2 position2D = ellipse.Evaluate((float)i / (float)segments);
-            points[i] = new Vector3(position2D.x, position2D.y, 0f);
+            Vector3 position = ellipse.Evaluate((float)i / (float)segments);
+            points[i] = new Vector3(position.x, position.y, position.z);
 
         }
         points[segments] = points[0];

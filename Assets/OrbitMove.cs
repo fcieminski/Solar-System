@@ -7,8 +7,8 @@ public class OrbitMove : MonoBehaviour
     public Transform movingPlanet;
     public Ellipse orbit;
     [Range(0f, 1f)]
-    public float orbitProgress;
-    public float orbitPeriod;
+    public float orbitProgress = 0f;
+    public float orbitPeriod = 3f;
     public bool orbitActive = true;
     void Start()
     {
@@ -27,8 +27,8 @@ public class OrbitMove : MonoBehaviour
 
     void SetPlanetPosition()
     {
-        Vector2 orbitPos = orbit.Evaluate(orbitProgress);
-        movingPlanet.localPosition = new Vector3(orbitPos.x, 0, orbitPos.y);
+        Vector3 orbitPos = orbit.Evaluate(orbitProgress);
+        movingPlanet.localPosition = new Vector3(orbitPos.x, orbitPos.y, orbitPos.z);
     }
 
     IEnumerator AnimateOrbit()
