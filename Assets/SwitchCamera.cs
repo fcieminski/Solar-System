@@ -8,6 +8,8 @@ public class SwitchCamera : MonoBehaviour
 
     public GameObject[] planets;
     public Camera[] cameras;
+    int current = 0;
+
 
     void Start()
     {
@@ -17,10 +19,27 @@ public class SwitchCamera : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
+            Debug.Log(current);
+            if (current == cameras.Length - 1)
+            {
+                current = 0;
+            }
+            else
+            {
+                current++;
+            }
+            foreach (Camera camera in cameras)
+            {
+                camera.enabled = false;
+                if (!cameras[current].enabled)
+                {
+                    cameras[current].enabled = true;
+                }
 
-            Debug.Log("space key was pressed");
+            }
         }
     }
+
 }
