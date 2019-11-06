@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class LookAt : MonoBehaviour
 {
     public Transform sun;
-    [Range(0, -100)]
-    public float distance;
     void Start()
     {
 
@@ -15,8 +13,5 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.LookAt(sun);
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, distance);
     }
-
 }
-

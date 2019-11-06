@@ -627,8 +627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5e46f62796de045963cd00d0743b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 1418013845}
-  sun: {fileID: 187490568}
+  planet: {fileID: 1516484416}
+  sun: {fileID: 187490572}
+  target: {fileID: 187490572}
+  field: 0
   cameraDistance: 10
 --- !u!1 &551978835
 GameObject:
