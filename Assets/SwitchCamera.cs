@@ -21,7 +21,6 @@ public class SwitchCamera : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log(current);
             if (current == cameras.Length - 1)
             {
                 current = 0;
