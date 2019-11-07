@@ -6,8 +6,6 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform sun;
     public Transform planet;
-    [Range(0, -100)]
-    public float distance;
     void Start()
     {
 
@@ -16,7 +14,8 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.LookAt(sun);
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -planet.localScale.x * 2);
+        transform.localPosition = new Vector3(transform.localPosition.x, 0.72f, -2f);
+        transform.eulerAngles = new Vector3(16f, transform.eulerAngles.y, transform.eulerAngles.z);
     }
 
 }
